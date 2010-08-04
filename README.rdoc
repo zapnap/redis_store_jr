@@ -17,7 +17,17 @@ that works reliably with Rails and Redis 1.2, without the complicated
 We assume you already have [Redis](http://code.google.com/p/redis/) set up and
 running. If not, you know what to do.
 
-  config.gem 'redis_store_jr', :require => 'redis_store'
+In your environment.rb:
+
+  config.gem 'redis_store_jr', :lib => 'redis_store'
+
+Or your Gemfile:
+
+  gem 'redis_store_jr', :require => 'redis_store' 
+
+In your production (or staging) environment config:
+
+  require 'redis_store'
   config.cache_store = :redis_store, 'localhost:6379'
 
 This has only been tested on Rails 2.3.x. No guarantees about Rails 3.
