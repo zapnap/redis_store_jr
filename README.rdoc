@@ -1,6 +1,26 @@
-= redistore
+= Redis Store Jr.
 
-Description goes here.
+This is a vastly simplified version of RedisStore.
+
+Most of the code was lifted directly from an earlier version of Luca Guidi's
+redis-store gem. It does *not* support Sinatra, Merb, or many of the other
+options that his Gem does. So if you're looking for that stuff, you probably
+want to take a look at the [the original
+project](http://github.com/jodosha/redis-store).
+
+On the other hand, if you're looking for a super-simple Redis store interface
+that works reliably with Rails and Redis 1.2, without the complicated
+(and often unnecessary) dependencies, look no further.
+
+== Installation
+
+We assume you already have [Redis](http://code.google.com/p/redis/) set up and
+running. If not, you know what to do.
+
+  config.gem 'redis_store_jr', :require => 'redis_store'
+  config.cache_store = :redis_store, 'localhost:6379'
+
+This has only been tested on Rails 2.3.x. No guarantees about Rails 3.
 
 == Note on Patches/Pull Requests
  

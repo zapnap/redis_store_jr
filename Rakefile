@@ -4,14 +4,16 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "redistore"
+    gem.name = "redis_store_jr"
     gem.summary = %Q{TODO: one-line summary of your gem}
     gem.description = %Q{TODO: longer description of your gem}
     gem.email = "nap@zerosum.org"
-    gem.homepage = "http://github.com/zapnap/redistore"
+    gem.homepage = "http://github.com/zapnap/redis_store_jr"
     gem.authors = ["Nick Plante"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
     gem.add_development_dependency "yard", ">= 0"
+    gem.add_development_dependency "redis", "~>1.0"
+    gem.add_development_dependency "activesupport", "~>2.3"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
