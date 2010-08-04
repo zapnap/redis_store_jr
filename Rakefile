@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "redis_store_jr"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Simple Redis Cache Store for Rails}
+    gem.description = %Q{Simple Redis Cache Store for Rails}
     gem.email = "nap@zerosum.org"
     gem.homepage = "http://github.com/zapnap/redis_store_jr"
     gem.authors = ["Nick Plante"]
