@@ -14,7 +14,7 @@ that works reliably with Rails and Redis 1.2, without the complicated
 
 == Installation
 
-We assume you already have [Redis](http://code.google.com/p/redis/) set up and
+We assume you already have Redis (http://code.google.com/p/redis/) set up and
 running. If not, you know what to do.
 
 In your environment.rb:
