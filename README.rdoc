@@ -5,8 +5,9 @@ This is a vastly simplified version of RedisStore.
 Most of the code was lifted directly from an earlier version of Luca Guidi's
 redis-store gem. It does *not* support Sinatra, Merb, or many of the other
 options that his Gem does. So if you're looking for that stuff, you probably
-want to take a look at the [the original
-project](http://github.com/jodosha/redis-store).
+want to take a look at the original project:
+
+http://github.com/jodosha/redis-store
 
 On the other hand, if you're looking for a super-simple Redis store interface
 that works reliably with Rails and Redis 1.2, without the complicated
