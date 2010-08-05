@@ -27,3 +27,10 @@ class RedisStore
     end
   end
 end
+
+Redis.class_eval do
+  def self.deprecate(message, trace = caller[0])
+    # No-op. Suppress Redis 2.0 setex warnings (target is Redis 1.2).
+  end
+end
+
