@@ -34,7 +34,7 @@ To use the Rails.cache store, add the following to an initializer or your
 environment-specific config:
 
   require 'redis_store'
-  config.cache_store = :redis_store, 'localhost:6379'
+  config.cache_store = :redis_store, 'localhost:6379/10'
 
 Want to store user session data in Redis too? Of course you do.
 
