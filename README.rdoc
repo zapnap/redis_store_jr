@@ -2,10 +2,11 @@
 
 This is a vastly simplified version of RedisStore.
 
-Most of the code was lifted directly from an earlier version of Luca Guidi's
-redis-store gem. It does *not* support Sinatra, Merb, or many of the other
-options that his Gem does. So if you're looking for that stuff, you probably
-want to take a look at the original project:
+Much of this code was shamelessly lifted from an earlier version of Luca
+Guidi's redis-store gem. It does *not* support Sinatra, Merb, distributed
+storage, or many of the other options that his Gem does. So if you're 
+lookig for that stuff, you probably want to take a look at the original 
+project:
 
 http://github.com/jodosha/redis-store
 
@@ -26,10 +27,22 @@ Or your Gemfile:
 
   gem 'redis_store_jr', :require => 'redis_store' 
 
-In your production (or staging) environment config:
+To use the Rails.cache store, add the following to an initializer or your
+environment-specific config:
 
   require 'redis_store'
   config.cache_store = :redis_store, 'localhost:6379'
+
+Want to store user session data in Redis too? Of course you do.
+
+  ActionController::Base.session = {
+    :host => 'dbhost'
+    :port => 6379,
+    :db   => 2,
+    :expire_after => 24.hours,
+    :key_prefix   => "myapp:session:"
+  }
+  ActionController::Base.session_store = RedisSessionStore
 
 This has only been tested on Rails 2.3.x. No guarantees about Rails 3.
 

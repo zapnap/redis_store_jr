@@ -47,7 +47,7 @@ class RedisStore
 
     def expires_in(options)
       if options
-        options[:expire_after] || options[:expire_in]
+        options[:expire_after] || options[:expires_in]
       else
         nil
       end

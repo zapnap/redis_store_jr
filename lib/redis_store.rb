@@ -1,11 +1,14 @@
 gem 'redis', '~> 1.0'
 gem 'activesupport', '~> 2.3'
+gem 'actionpack', '~> 2.3'
 
 require 'redis'
 require 'active_support'
+require 'action_controller'
 
 require 'redis_store/marshalled_client'
 require 'redis_store/cache/redis_store'
+require 'redis_store/session/redis_session_store'
 
 class RedisStore
   class Config < Hash

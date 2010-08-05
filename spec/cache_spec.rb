@@ -18,7 +18,7 @@ describe ActiveSupport::Cache::RedisStore do
 
   it 'should read and write data with an expiration' do
     with_store do |store|
-      store.write('abc', @obj, :expire_in => 1.second)
+      store.write('abc', @obj, :expires_in => 1.second)
       store.read('abc').should == @obj ; sleep 2
       store.read('abc').should be_nil
     end
