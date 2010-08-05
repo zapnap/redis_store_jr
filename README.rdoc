@@ -14,6 +14,9 @@ On the other hand, if you're looking for a super-simple Redis store interface
 that works reliably with Rails and Redis 1.2, without the complicated
 (and often unnecessary) dependencies, look no further.
 
+Note that this gem is specifically designed to work with Redis 1.2 and v1.0.7
+of the Redis gem.
+
 == Installation
 
 We assume you already have Redis (http://code.google.com/p/redis/) set up and
