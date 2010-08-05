@@ -42,7 +42,7 @@ Want to store user session data in Redis too? Of course you do.
     :expire_after => 24.hours,
     :key_prefix   => "myapp:session:"
   }
-  ActionController::Base.session_store = RedisSessionStore
+  ActionController::Base.session_store = :redis_session_store
 
 This has only been tested on Rails 2.3.x. No guarantees about Rails 3.
 
